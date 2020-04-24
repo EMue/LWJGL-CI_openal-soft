@@ -42,8 +42,8 @@ matrix:
     - cmake --build .
     - strip libopenal.so
     - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/x64/libopenal.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/x64/libopenal.so.git $S3_PARAMS"
+    #- "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/x64/libopenal.so $S3_PARAMS"
+    #- "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/x64/libopenal.so.git $S3_PARAMS"
 
   # -----------------
   - name: "Linux arm32"
@@ -78,8 +78,8 @@ matrix:
     - cmake --build .
     - arm-linux-gnueabihf-strip libopenal.so
     - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/arm32/libopenal.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/arm32/libopenal.so.git $S3_PARAMS"
+    #- "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/arm32/libopenal.so $S3_PARAMS"
+    #- "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/arm32/libopenal.so.git $S3_PARAMS"
 
   # -----------------
   - name: "Linux arm64"
@@ -115,8 +115,8 @@ matrix:
     - cmake --build .
     - aarch64-linux-gnu-strip libopenal.so
     - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/arm64/libopenal.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/arm64/libopenal.so.git $S3_PARAMS"
+    #- "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/arm64/libopenal.so $S3_PARAMS"
+    #- "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/arm64/libopenal.so.git $S3_PARAMS"
 
   # -----------------
   - name: "Linux mips64"
@@ -150,8 +150,8 @@ matrix:
     - cmake --build .
     - mips64el-linux-gnuabi64-strip libopenal.so
     - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/mips64/libopenal.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/mips64/libopenal.so.git $S3_PARAMS"
+    #- "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/mips64/libopenal.so $S3_PARAMS"
+    #- "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/mips64/libopenal.so.git $S3_PARAMS"
 
   # -----------------
   - name: "Linux ppc64le"
@@ -187,8 +187,8 @@ matrix:
     - cmake --build .
     - powerpc64le-linux-gnu-strip libopenal.so
     - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/ppc64le/libopenal.so $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/ppc64le/libopenal.so.git $S3_PARAMS"
+    #- "aws s3 cp libopenal.so s3://build.lwjgl.org/nightly/linux/ppc64le/libopenal.so $S3_PARAMS"
+    #- "aws s3 cp revision.git s3://build.lwjgl.org/nightly/linux/ppc64le/libopenal.so.git $S3_PARAMS"
 
   # -----------------
   - name: "macOS"
@@ -210,5 +210,5 @@ matrix:
     - cmake --build .
     - strip -u -r libopenal.dylib
     - "git log --first-parent --pretty=format:%H HEAD~2..HEAD~1 > revision.git"
-    - "aws s3 cp libopenal.dylib s3://build.lwjgl.org/nightly/macosx/x64/libopenal.dylib $S3_PARAMS"
-    - "aws s3 cp revision.git s3://build.lwjgl.org/nightly/macosx/x64/libopenal.dylib.git  $S3_PARAMS"
+    #- "aws s3 cp libopenal.dylib s3://build.lwjgl.org/nightly/macosx/x64/libopenal.dylib $S3_PARAMS"
+    #- "aws s3 cp revision.git s3://build.lwjgl.org/nightly/macosx/x64/libopenal.dylib.git  $S3_PARAMS"
