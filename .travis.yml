@@ -182,7 +182,7 @@ matrix:
     - sudo sed -i 's#http://.*/ubuntu#http://ports.ubuntu.com/ubuntu-ports#' /etc/apt/sources.list.d/ports.list
     - sudo dpkg --add-architecture ppc64el
     - sudo apt-get update || true
-    - sudo apt-get -yq --no-install-suggests --no-install-recommends install libpulse-dev:ppc64el portaudio19-dev:ppc64el libasound2-dev:ppc64el libjack-dev:ppc64el
+    - sudo apt-get -yq --no-install-suggests --no-install-recommends install libpulse-dev:ppc64el portaudio19-dev:ppc64el libasound2-dev:ppc64el libjack-dev:ppc64el libglib2.0-dev:ppc64el
     - openssl aes-256-cbc -K $encrypted_3b8cb6da0fbe_key -iv $encrypted_3b8cb6da0fbe_iv -in .travis/id_rsa_deploy_travis.enc -out .travis/id_rsa_deploy_travis -d
 
     script:
