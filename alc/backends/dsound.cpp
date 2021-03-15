@@ -351,7 +351,12 @@ void DSoundPlayback::open(const char *name)
     if(SUCCEEDED(hr))
         hr = DirectSoundCreate(guid, &mDS, nullptr);
     if(SUCCEEDED(hr))
-        hr = mDS->SetCooperativeLevel(GetForegroundWindow(), DSSCL_PRIORITY);
+    {
+        HWND hWnd = GetForegroundWindow();
+        if (hWnd == NULL)
+            hWnd = GetDesktopWindow();
+        hr = mDS->SetCooperativeLevel(hWnd, DSSCL_PRIORITY);
+	}
     if(FAILED(hr))
         throw al::backend_exception{al::backend_error::DeviceError, "Device init failed: 0x%08lx",
             hr};
